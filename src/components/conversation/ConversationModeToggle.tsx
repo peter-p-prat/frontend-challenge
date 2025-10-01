@@ -22,6 +22,7 @@ export const ConversationModeToggle = (): React.ReactElement => {
                     id="hs-small-soft-switch-with-icons"
                     className="peer sr-only"
                     checked={conversationMode === ConversationMode.TEXT}
+                    readOnly
                 />
                 <span className="absolute inset-0 bg-zinc-900 rounded-full"></span>
                 <span className="absolute top-1/2 start-1 -translate-y-1/2 w-14 h-7 bg-black rounded-full shadow-xs transition-transform duration-200 ease-in-out  peer-checked:translate-x-full"></span>
