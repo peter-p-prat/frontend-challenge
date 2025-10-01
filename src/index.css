@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Enhanced font rendering */
+* {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif !important;
+}
+
+/* Inter font family override */
+.font-inter {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif !important;
+}
+
+@theme {
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.001);
+    }
+  }
+  --animate-pulse: pulse 10s ease-in-out infinite;
+
+  --spacing-navbar: 89px;
+}
+
+@layer utilities {
+  .layout-container {
+    @apply w-full px-4 md:px-8 lg:max-w-4xl lg:mx-auto lg:px-0;
+  }
+}
+
+@layer components {
+  .button {
+    @apply flex items-center justify-center gap-2 px-5 font-medium text-teal-300 rounded-full bg-zinc-900 cursor-pointer hover:bg-zinc-900/80 active:bg-zinc-900/70 focus-visible:outline-1 focus-visible:outline-teal-300;
+  }
+
+  .text-input {
+    @apply w-full text-base/[19px] text-white rounded-full px-[12px] py-[8.5px] outline-neutral-200 outline-[0.5px] focus:outline-2 focus:outline-teal-300 placeholder-neutral-500 transition-all;
+  }
+
+  .nav-button-active-glow {
+    @apply after:content-[""] after:absolute after:top-full after:h-[108px] after:w-[24px] after:bg-teal-300 after:blur-[45px];
+  }
+
+  .message-bubble-ai {
+    @apply transition-all duration-300 starting:-translate-x-full starting:opacity-0 max-w-[300px] px-4 py-3 rounded-[18px] focus:outline-1 focus:outline-teal-300 bg-black text-white border border-neutral-600 rounded-bl-none;
+  }
+
+  .message-bubble-user {
+    @apply transition-all duration-300 starting:translate-x-full starting:opacity-0 max-w-[300px] px-4 py-3 rounded-[18px] focus:outline-1 focus:outline-teal-300 text-white ml-auto rounded-br-none bg-neutral-900;
+  }
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
