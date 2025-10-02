@@ -6,6 +6,10 @@ export enum IconName {
     MENU = "menu",
     MICROPHONE = "microphone",
     MICROPHONE_MUTED = "microphone_muted",
+    INSIGHTS = "insights",
+    CHAT = "chat",
+    EXPLORE = "explore",
+    IRIS = "iris",
 }
 
 export const icons: Record<IconName, ReactNode> = {
@@ -77,6 +81,57 @@ export const icons: Record<IconName, ReactNode> = {
                 d="M22.53 1.47007C22.3894 1.32962 22.1988 1.25073 22 1.25073C21.8013 1.25073 21.6106 1.32962 21.47 1.47007L8.17001 14.7701C7.56541 14.2352 7.08152 13.5779 6.75049 12.8417C6.41946 12.1055 6.24885 11.3073 6.25001 10.5001C6.25001 10.3012 6.17099 10.1104 6.03034 9.96974C5.88969 9.82909 5.69892 9.75007 5.50001 9.75007C5.3011 9.75007 5.11033 9.82909 4.96968 9.96974C4.82903 10.1104 4.75001 10.3012 4.75001 10.5001C4.74947 11.504 4.95918 12.497 5.36564 13.415C5.77211 14.333 6.36632 15.1556 7.11001 15.8301L1.47001 21.4701C1.32956 21.6107 1.25067 21.8013 1.25067 22.0001C1.25067 22.1988 1.32956 22.3894 1.47001 22.5301C1.61064 22.6705 1.80126 22.7494 2.00001 22.7494C2.19876 22.7494 2.38939 22.6705 2.53001 22.5301L22.53 2.53007C22.6705 2.38945 22.7494 2.19882 22.7494 2.00007C22.7494 1.80132 22.6705 1.6107 22.53 1.47007Z"
                 fill="currentColor"
             />
+        </svg>
+    ),
+    [IconName.INSIGHTS]: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+            <path
+                fill="currentColor"
+                fillRule="evenodd"
+                d="M12 3.75c3.624 0 6.563 2.871 6.563 6.413a6.32 6.32 0 0 1-1.893 4.506c-.53.525-.92 1.205-.92 1.952a1.13 1.13 0 0 1-1.129 1.129H9.38a1.13 1.13 0 0 1-1.129-1.129c0-.747-.39-1.427-.92-1.952a6.32 6.32 0 0 1-1.893-4.506C5.438 6.621 8.377 3.75 12 3.75ZM12 6a.75.75 0 0 0 0 1.5c1.534 0 2.813 1.285 2.813 2.915a.75.75 0 0 0 1.5 0C16.313 7.997 14.402 6 12 6Z"
+                clipRule="evenodd"
+            />
+            <path fill="currentColor" d="M13 19.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h2Z" />
+        </svg>
+    ),
+    [IconName.CHAT]: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="currentColor">
+            <path
+                fill="currentColor"
+                d="M15.333 5a7 7 0 1 1 0 14h-13v-7a7 7 0 0 1 7-7h6Zm-3 3.25a.75.75 0 0 0-.75.75v6a.75.75 0 0 0 1.5 0V9a.75.75 0 0 0-.75-.75Zm-4 2a.75.75 0 0 0-.75.75v2a.75.75 0 0 0 1.5 0v-2a.75.75 0 0 0-.75-.75Zm8 0a.75.75 0 0 0-.75.75v2a.75.75 0 0 0 1.5 0v-2a.75.75 0 0 0-.75-.75Z"
+            />
+        </svg>
+    ),
+    [IconName.EXPLORE]: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+            <path
+                fill="currentColor"
+                d="M16.34 5.07 8.55 6.91a2.24 2.24 0 0 0-1.64 1.64l-1.84 7.79a2.14 2.14 0 0 0 2.59 2.59l7.79-1.84a2.24 2.24 0 0 0 1.64-1.64l1.84-7.79a2.14 2.14 0 0 0-2.59-2.59Zm-2.75 8.52a2.25 2.25 0 1 1 0-3.18 2.26 2.26 0 0 1 0 3.18Z"
+            />
+        </svg>
+    ),
+    [IconName.IRIS]: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="currentColor">
+            <g filter="url(#a)" opacity=".9">
+                <path
+                    fill="currentColot"
+                    fillRule="evenodd"
+                    d="M12.667 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm0 2.25a.75.75 0 0 0 0 1.5 4.25 4.25 0 0 1 4.25 4.25.75.75 0 0 0 1.5 0 5.75 5.75 0 0 0-5.75-5.75Z"
+                    clipRule="evenodd"
+                />
+            </g>
+            <defs>
+                <filter id="a" width="32" height="32" x="-3.333" y="-4" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix values="0 0 0 0 0 0 0 0 0 0.835294 0 0 0 0 0.745098 0 0 0 0.35 0" />
+                    <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_407_60" />
+                    <feBlend in="SourceGraphic" in2="effect1_dropShadow_407_60" result="shape" />
+                </filter>
+            </defs>
         </svg>
     ),
 };
